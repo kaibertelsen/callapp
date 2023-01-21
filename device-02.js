@@ -1,23 +1,7 @@
 
-loudsettings();
-
-function loudsettings(){
-$('#alerttitle').val("{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}");
-
-
-// sjekke om det er user koblet til transmitter
-//Navn og bilde
-if(!"{{wf {&quot;path&quot;:&quot;user:name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}"==""){
-var _img = document.getElementById('headerimage');
-_img.src = "{{wf {&quot;path&quot;:&quot;user:image&quot;,&quot;type&quot;:&quot;ImageRef&quot;\} }}";
-_img.srcset="{{wf {&quot;path&quot;:&quot;user:image&quot;,&quot;type&quot;:&quot;ImageRef&quot;\} }}";
-document.getElementById("headertext").innerHTML="{{wf {&quot;path&quot;:&quot;user:name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}";
-}
 
 
 
-//setselector("radgiver","");
-}
 
 function headerselect(elementid){
 const element = document.getElementById(elementid);
@@ -34,24 +18,9 @@ usernamedevice=element.dataset.name;
 // send api
 }
 
-function transmitterselect(elementid){
-//loader ny transmitter
-//var collectionurl ="https://callapp-63bcc2.webflow.io/device/"
-var currenturl = window.location.href;
-var oldslug = "{{wf {&quot;path&quot;:&quot;slug&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}";
-var collectionurl = currenturl.substring(0,currenturl.length-oldslug.length);
-
-window.location.replace(collectionurl+elementid);
-}
-
-
-
-
-
 
 function deviceselect(elementid){
 const element = document.getElementById(elementid);
-
 //lukke og skule beskjed wrapper
 if(elementid==selecteddevice){
 inverthideshow(document.getElementById("beskjed"));
@@ -88,42 +57,7 @@ document.getElementById("beskjed").style.display = "none";
 //alert er busy
 }
 }
-function callbuttonselect(elementid){
-const buttonelement = document.getElementById(elementid);
-const element = document.getElementById(buttonelement.dataset.infoelementid);
-$('#todeviceid').val(element.dataset.deviceid);
-	if (document.getElementById("text-110").value===""){
-   var textvalue ="{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }}";
-   //det er ikke text i feltet
-			if(!usernamedevice==""){
-  			textvalue = textvalue+"-"+usernamedevice ;
-  			}
-	$('#alerttitle').val(textvalue);
-	$('#text').val(textvalue);
-	}else{
-	//det er text i feltet
-	var textvalue = document.getElementById("text-110").value;
-  var titletextvalue = document.getElementById("text-110").value;
-  if(senddeviceid=="true"){
-  textvalue = "{{wf {&quot;path&quot;:&quot;name&quot;,&quot;type&quot;:&quot;PlainText&quot;\} }} - "+textvalue;
-  	if(!usernamedevice==""){
-  	textvalue = textvalue+"-"+usernamedevice;
-  	}
-  }
-  
-$('#alerttitle').val(textvalue);
-$('#text').val(textvalue);
-}
-//send
-$("#sendermaster").click();
-//tøm verdier
-document.getElementById("beskjed").style.display = "none";
 
-unmarkelement("titlemaster");
-unmarkelement("globalbuttonitem");
-senddeviceid="true";
-
-}
 
 
 function textselect(elementid){
