@@ -82,11 +82,11 @@ document.getElementById("text").value = text;
 
 unmarkelement("titlemaster");
 unmarkelement("devicemaster");
-unmarkelement("globalbuttonitem");
+//unmarkelement("globalbuttonitem");
 //markelement(element.parentElement.parentElement);
 
 sendmaster();
-alarmmarkelement(element.parentElement);
+alarmmarkelement(element.parentElement.parentElement);
 //generer element med beskjeden
 makemessageelement("Alle",title,text,usernamedevice);
 
