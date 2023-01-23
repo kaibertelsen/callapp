@@ -86,7 +86,7 @@ unmarkelement("globalbuttonitem");
 //markelement(element.parentElement.parentElement);
 
 sendmaster();
-alarmmarkelement(element.parentElement.parentElement);
+alarmmarkelement(element.parentElement);
 //generer element med beskjeden
 makemessageelement("Alle",title,text,usernamedevice);
 
