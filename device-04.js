@@ -56,18 +56,7 @@ document.getElementById("beskjed").style.display = "none";
 
 
 
-function textselect(elementid){
-const element = document.getElementById(elementid);
-document.getElementById("text-110").value = element.dataset.title;
-unmarkelement("titlemaster");
-unmarkelement("globalbuttonitem");
-markelement(element.parentElement.parentElement);
-senddeviceid=element.dataset.senderdevicename;
-$("#"+senddeviceid+"-call").click();
 
-
-
-}
 
 function globalbuttonselect(elementid){
 const element = document.getElementById(elementid);
