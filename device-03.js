@@ -1,8 +1,4 @@
 
-
-
-
-
 function headerselect(elementid){
 const element = document.getElementById(elementid);
 //sett nytt bilde
@@ -67,6 +63,7 @@ unmarkelement("titlemaster");
 unmarkelement("globalbuttonitem");
 markelement(element.parentElement.parentElement);
 senddeviceid=element.dataset.senderdevicename;
+$("#"+senddeviceid+"-call").click();
 
 
 
