@@ -58,14 +58,39 @@ function globalbuttonselect(elementid){
 const element = document.getElementById(elementid);
 
 var deviceids = findallelement("active","recivers");
-$('#text').val(element.dataset.title);
-$('#todeviceid').val(deviceids);
-$('#alerttitle').val(element.dataset.title);
+
+var title="";
+var text="";
+var uname= "";
+var dname="";
+var tname="";
+
+if (element.dataset.senddevicename=="true"){
+dname=devicename+"-";
+}
+
+if (element.dataset.sendusername=="true"){
+uname = "_Fra:"+usernamedevice;
+}
+
+title=dname+element.dataset.title;
+text = dname+element.dataset.text+tname+uname;
+
+document.getElementById("todeviceid").value = deviceids;
+document.getElementById("alerttitle").value = title;
+document.getElementById("text").value = text;
+
 unmarkelement("titlemaster");
 unmarkelement("devicemaster");
 unmarkelement("globalbuttonitem");
-markelement(element.parentElement.parentElement);
-$("#sendermaster").click();
+//markelement(element.parentElement.parentElement);
+
+sendmaster();
+alarmmarkelement(element.parentElement.parentElement);
+//generer element med beskjeden
+makemessageelement("Alle",title,text,usernamedevice);
+
+
 
 }
 
