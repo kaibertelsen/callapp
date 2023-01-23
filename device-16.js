@@ -86,7 +86,7 @@ document.getElementById("text").value = text;
 //markelement(element.parentElement.parentElement);
 
 sendmaster();
-alarmmarkelement(element.parentElement.parentElement);
+alarmmarkelement(element.parentElement);
 //generer element med beskjeden
 makemessageelement("Alle",title,text,usernamedevice);
 
@@ -132,3 +132,12 @@ function unmarkelement(classname){
         }
 }
 
+function alarmmarkelement(element){
+	element.style.display="Block";
+	element.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
+	setTimeout(function(){alarmmarkeroff(element)},5000);
+	}
+
+function alarmmarkeroff(element){
+	element.style.backgroundColor = "rgba(255, 255, 255, 0.0)";
+	}
