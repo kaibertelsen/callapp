@@ -31,6 +31,7 @@ document.getElementById("text-110").value="";
 
 if(element.dataset.status==="active"){
 todeviceid=element.dataset.deviceid;
+tousername=element.dataset.deviceusername;
 unmarkelement("devicemaster");
 markelement(element.parentElement.parentElement);
 const beskjedelement = document.getElementById("beskjed");
