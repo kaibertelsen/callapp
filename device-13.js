@@ -80,8 +80,8 @@ document.getElementById("todeviceid").value = deviceids;
 document.getElementById("alerttitle").value = title;
 document.getElementById("text").value = text;
 
-unmarkelement("titlemaster");
-unmarkelement("devicemaster");
+//unmarkelement("titlemaster");
+//unmarkelement("devicemaster");
 //unmarkelement("globalbuttonitem");
 //markelement(element.parentElement.parentElement);
 
