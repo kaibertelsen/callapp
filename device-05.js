@@ -25,20 +25,14 @@ document.getElementById("beskjed").style.display = "Block";
 selecteddevice=elementid;
 }
 
-
-
 unmarkelement("titlemaster");
 unmarkelement("globalbuttonitem");
 document.getElementById("text-110").value="";
 
-
 if(element.dataset.status==="active"){
-$('#todeviceid').val(element.dataset.deviceid);
-
-
+todeviceid=element.dataset.deviceid;
 unmarkelement("devicemaster");
 markelement(element.parentElement.parentElement);
-//$("#beskjed").prependTo(element.parentElement.parentElement.parentElement);
 const beskjedelement = document.getElementById("beskjed");
 const selectedelement = element.parentElement.parentElement;
 selectedelement.parentNode.insertBefore(beskjedelement, selectedelement);
