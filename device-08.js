@@ -6,7 +6,8 @@ var _img = document.getElementById('headerimage');
 _img.src = element.dataset.image;
 _img.srcset=element.dataset.image;
 //sett nytt text
-document.getElementById("headertext").innerHTML=element.dataset.name;
+document.getElementById("firstnametext").innerHTML=element.dataset.firstname;
+document.getElementById("lastnametext").innerHTML=element.dataset.lastname;
 //sett variabelennavn
 usernamedevice=element.dataset.name;
 //skul liste
