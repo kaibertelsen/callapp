@@ -143,7 +143,7 @@ function unmarkelement(classname){
 }
 
 function alarmmarkelement(element){
-	element.style.display="Block";
+	//element.style.display="Block";
 	element.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
 	setTimeout(function(){alarmmarkeroff(element)},5000);
 	}
