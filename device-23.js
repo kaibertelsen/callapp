@@ -156,9 +156,9 @@ function alarmmarkeroff(element){
 
 function makemessageelement(to,title,message,from){
 	var arrayfieldname = [];
-	arrayfieldname.push("nr");
+	arrayfieldname.push("Nr");
 	arrayfieldname.push("title");
-	arrayfieldname.push("text");
+	arrayfieldname.push("Tekst");
 	
 	var arrayfieldvalue = [];
 	arrayfieldvalue.push(devicename);
