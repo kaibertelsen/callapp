@@ -157,13 +157,13 @@ function alarmmarkeroff(element){
 function makemessageelement(to,title,message,from){
 	var arrayfieldname = [];
 	arrayfieldname.push("name");
-	arrayfieldname.push("title");
-	arrayfieldname.push("Tekst");
+	//arrayfieldname.push("title");
+	//arrayfieldname.push("tekst");
 	
 	var arrayfieldvalue = [];
 	arrayfieldvalue.push(devicename);
-	arrayfieldvalue.push(title);
-	arrayfieldvalue.push(message);
+	//arrayfieldvalue.push(title);
+	//arrayfieldvalue.push(message);
 	
 	creatsendoapi("63c66ea078517bf506285585",arrayfieldname,arrayfieldvalue);
 	}
