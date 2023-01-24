@@ -154,16 +154,37 @@ function alarmmarkeroff(element){
 
 
 
-function makemessageelement(to,title,message,from){
+function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuserid,title,message){
 	var arrayfieldname = [];
-	arrayfieldname.push("name");
-	//arrayfieldname.push("title");
-	//arrayfieldname.push("tekst");
-	
 	var arrayfieldvalue = [];
+
+	arrayfieldname.push("name");
 	arrayfieldvalue.push(devicename);
-	//arrayfieldvalue.push(title);
-	//arrayfieldvalue.push(message);
+
+	arrayfieldname.push("title");
+	arrayfieldvalue.push(title);
+
+	arrayfieldname.push("tekst");
+	arrayfieldvalue.push(message);
+
+	arrayfieldname.push("senderdevice");
+	arrayfieldvalue.push(senderdeviceid);
+
+	arrayfieldname.push("senderuser");
+	arrayfieldvalue.push(senderuserid);
+
+	arrayfieldname.push("reciveruser");
+	arrayfieldvalue.push(resiveuserid);
+
+	arrayfieldname.push("reciverdevice");
+	arrayfieldvalue.push(resivedeviceid);
+	
+
+	arrayfieldname.push("status");
+	arrayfieldvalue.push("open");
+
+	arrayfieldname.push("toall");
+	arrayfieldvalue.push("false");
 	
 	creatsendoapi("63c66ea078517bf506285585",arrayfieldname,arrayfieldvalue);
 	}
