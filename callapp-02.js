@@ -38,8 +38,4 @@ function sendtoapi(arrayfieldname,arrayfieldvalue){
 	//kallet på api webflow funksjonen 
     callapi(baseId,collectionId,itemId,bodystring,"PATCH","webflow","101");
 
-
-
-
-
 }

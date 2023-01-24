@@ -13,6 +13,16 @@ usernamedevice=element.dataset.name;
 //skul liste
 //document.getElementById("dropdownlist").style.display="none";
 // send api
+
+var arrayfieldname = [];
+arrayfieldname.push("name");
+arrayfieldname.push("user");
+
+
+var arrayfieldvalue = [];
+arrayfieldvalue.push(devicename);
+arrayfieldvalue.push(element.dataset.webflowid);
+sendtoapi(arrayfieldname,arrayfieldvalue);
 }
 
 
