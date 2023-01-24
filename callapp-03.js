@@ -39,3 +39,10 @@ function sendtoapi(arrayfieldname,arrayfieldvalue){
     callapi(baseId,collectionId,itemId,bodystring,"PATCH","webflow","101");
 
 }
+
+function creatsendoapi(arrayfieldname,arrayfieldvalue){
+    let bodystring = makebodystring(arrayfieldname,arrayfieldvalue);
+	//kallet på api webflow funksjonen 
+    callapi(baseId,collectionId,itemId,bodystring,"POST","webflow","102");
+
+}

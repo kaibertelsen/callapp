@@ -151,3 +151,19 @@ function alarmmarkelement(element){
 function alarmmarkeroff(element){
 	element.style.backgroundColor = "rgba(255, 255, 255, 0.0)";
 	}
+
+
+
+function makemessageelement(to,title,message,from){
+	var arrayfieldname = [];
+	arrayfieldname.push("name");
+	arrayfieldname.push("title");
+	arrayfieldname.push("text");
+	
+	var arrayfieldvalue = [];
+	arrayfieldvalue.push(devicename);
+	arrayfieldvalue.push(title);
+	arrayfieldvalue.push(message);
+	
+	creatsendoapi(arrayfieldname,arrayfieldvalue);
+	}
