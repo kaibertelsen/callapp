@@ -44,6 +44,6 @@ function creatsendoapi(cid,arrayfieldname,arrayfieldvalue){
     let bodystring = makebodystring(arrayfieldname,arrayfieldvalue);
 	//kallet på api webflow funksjonen 
    // callapi(baseId,cid,"",bodystring,"POST","webflow","102");
-   callapi(baseId,cid,"63cfcfb8474592c723746b36",bodystring,"GET","webflow","101");
+   callapi(baseId,cid,"63cfcfb8474592c723746b36",bodystring,"PATCH","webflow","101");
 
 }
