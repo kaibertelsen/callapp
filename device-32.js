@@ -97,11 +97,6 @@ document.getElementById("text").value = text;
 sendmaster();
 alarmmarkelement(element.parentElement);
 
-//generer label text message
-//generer label text message
-makelabeltextmessage(selecteddevice,dname,element.dataset.text+tname+uname);
-
-
 //generer element med beskjeden
 makemessageelement("Alle",title,text,usernamedevice);
 
