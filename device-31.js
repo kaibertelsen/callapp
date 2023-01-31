@@ -66,7 +66,6 @@ document.getElementById("beskjed").style.display = "none";
 
 function globalbuttonselect(elementid){
 const element = document.getElementById(elementid);
-
 var deviceids = findallelement("active","recivers");
 
 var title="";
@@ -97,6 +96,12 @@ document.getElementById("text").value = text;
 
 sendmaster();
 alarmmarkelement(element.parentElement);
+
+//generer label text message
+//generer label text message
+makelabeltextmessage(selecteddevice,dname,element.dataset.text+tname+uname);
+
+
 //generer element med beskjeden
 makemessageelement("Alle",title,text,usernamedevice);
 
@@ -116,7 +121,7 @@ function inverthideshow(element){
 
 function markelement(element){
 // marker valgt element
-element.style.backgroundColor = "rgba(255, 69, 70, 0.3)";
+element.style.backgroundColor = "rgba(255, 69, 70, 0.5)";
 
 }
 function findallelement(status,classname){
@@ -157,6 +162,9 @@ function alarmmarkeroff(element){
 
 
 function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuserid,title,message){
+	
+	
+	
 	var arrayfieldname = [];
 	var arrayfieldvalue = [];
 
