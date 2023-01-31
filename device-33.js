@@ -22,7 +22,7 @@ arrayfieldname.push("user");
 var arrayfieldvalue = [];
 arrayfieldvalue.push(devicename);
 arrayfieldvalue.push(element.dataset.webflowid);
-sendtoapi(arrayfieldname,arrayfieldvalue);
+sendtoapi("100",arrayfieldname,arrayfieldvalue);
 }
 
 
