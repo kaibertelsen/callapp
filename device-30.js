@@ -116,7 +116,7 @@ function inverthideshow(element){
 
 function markelement(element){
 // marker valgt element
-element.style.backgroundColor = "rgba(255, 255, 255, 1.0)";
+element.style.backgroundColor = "rgba(255, 69, 70, 0.3)";
 
 }
 function findallelement(status,classname){
