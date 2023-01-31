@@ -168,7 +168,7 @@ function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuse
 
 	arrayfieldname.push("title");
 	arrayfieldvalue.push(title);
-
+/*
 	arrayfieldname.push("tekst");
 	arrayfieldvalue.push(message);
 
@@ -190,6 +190,6 @@ function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuse
 
 	arrayfieldname.push("toall");
 	arrayfieldvalue.push("false");
-	
+	*/
 	creatsendoapi("63c66ea078517bf506285585",arrayfieldname,arrayfieldvalue);
 	}
