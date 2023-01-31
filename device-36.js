@@ -171,10 +171,10 @@ function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuse
 
 	arrayfieldname.push("tekst");
 	arrayfieldvalue.push(message);
-/*
+
 	arrayfieldname.push("senderdevice");
 	arrayfieldvalue.push(senderdeviceid);
-
+/*
 	arrayfieldname.push("senderuser");
 	arrayfieldvalue.push(senderuserid);
 
