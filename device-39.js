@@ -180,10 +180,10 @@ function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuse
 
 	arrayfieldname.push("reciveruser");
 	arrayfieldvalue.push(resiveuserid);
-/*
+
 	arrayfieldname.push("reciverdevice");
 	arrayfieldvalue.push(resivedeviceid);
-	
+	/*
 
 	arrayfieldname.push("status");
 	arrayfieldvalue.push("open");
