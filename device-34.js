@@ -168,10 +168,10 @@ function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuse
 
 	arrayfieldname.push("title");
 	arrayfieldvalue.push(title);
-/*
+
 	arrayfieldname.push("tekst");
 	arrayfieldvalue.push(message);
-
+/*
 	arrayfieldname.push("senderdevice");
 	arrayfieldvalue.push(senderdeviceid);
 
