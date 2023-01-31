@@ -36,7 +36,7 @@ function makebodystring(fieldnames,fieldvalues){
 function sendtoapi(arrayfieldname,arrayfieldvalue){
     let bodystring = makebodystring(arrayfieldname,arrayfieldvalue);
 	//kallet på api webflow funksjonen 
-    callapi(baseId,collectionId,itemId,bodystring,"PATCH","webflow","101");
+    callapi(baseId,collectionId,deviceid,bodystring,"PATCH","webflow","101");
 
 }
 
