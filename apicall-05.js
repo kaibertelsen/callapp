@@ -41,7 +41,7 @@ async function callapi(baseId,collectionId,itemId,bodystring,type,db,fid){
         });
         
         let data = await response.json();
-        apireturnnew (data,fid);
+        apireturnnew (collectionId,data,fid);
         
        }else if(db=="airtable"){
        //airtable
@@ -67,10 +67,10 @@ async function callapi(baseId,collectionId,itemId,bodystring,type,db,fid){
     }
     
 
-    function apireturnnew (data,fid){
+    function apireturnnew (cId,data,fid){
       //retur fra opprettelsen av webflow item
       let bodystring = makeupdatebodystring(data);
-      callapi("",collectionId,data._id,bodystring,"PATCH","webflow",fid);
+      callapi("",cId,data._id,bodystring,"PATCH","webflow",fid);
     }
 
     function makeupdatebodystring(data){
