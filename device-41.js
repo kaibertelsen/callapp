@@ -98,7 +98,7 @@ sendmaster();
 alarmmarkelement(element.parentElement);
 
 //generer element med beskjeden
-makemessageelement("Alle",title,text,usernamedevice);
+makemessageelement("",title,text,usernamedevice);
 
 
 
@@ -178,11 +178,11 @@ function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuse
 
 	arrayfieldname.push("reciveruser");
 	arrayfieldvalue.push(resiveuserid);
-/*
-//denne er noe feil med
+
+
 	arrayfieldname.push("reciverdevice");
 	arrayfieldvalue.push(resivedeviceid);
-	
+	/*
 
 	arrayfieldname.push("status");
 	arrayfieldvalue.push("open");
