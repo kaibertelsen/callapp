@@ -55,7 +55,14 @@ async function callapi(baseId,collectionId,itemId,bodystring,type,db,fid){
        let data = await response.json();
        apireturn (data,fid);
          }
-       }
+    }else if (type=="GET"){
+      //GET item data
+      if(db=="webflow"){
+      let response = await fetch(`https://webflow-woad.vercel.app/api/item?collectionId=${collectionId}&itemId=${itemId}&token=${token}`);
+      let data = await response.json();
+      apireturnnew (data,fid);
+      }
+    }
     
     }
     

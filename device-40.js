@@ -158,8 +158,6 @@ function alarmmarkeroff(element){
 
 function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuserid,title,message){
 	
-	
-	
 	var arrayfieldname = [];
 	var arrayfieldvalue = [];
 
