@@ -97,8 +97,6 @@ document.getElementById("text").value = text;
 sendmaster();
 alarmmarkelement(element.parentElement);
 
-//generer element med beskjeden
-makemessageelement("",title,text,usernamedevice);
 
 //generer element med beskjeden
 makemessageelement("all","",deviceid,userid,element.dataset.title,element.dataset.text);
