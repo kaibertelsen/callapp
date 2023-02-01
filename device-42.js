@@ -182,13 +182,13 @@ function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuse
 
 	arrayfieldname.push("reciverdevice");
 	arrayfieldvalue.push(resivedeviceid);
-	/*
+	
 
 	arrayfieldname.push("status");
 	arrayfieldvalue.push("open");
 
 	arrayfieldname.push("toall");
 	arrayfieldvalue.push("false");
-	*/
+	
 	creatsendoapi("63c66ea078517bf506285585",arrayfieldname,arrayfieldvalue);
 	}
