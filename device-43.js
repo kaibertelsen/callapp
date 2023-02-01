@@ -9,7 +9,7 @@ _img.srcset=element.dataset.image;
 document.getElementById("firstnametext").innerHTML=element.dataset.firstname;
 document.getElementById("lastnametext").innerHTML=element.dataset.lastname;
 //sett variabelennavn
-usernamedevice=element.dataset.name;
+usernamedevice=element.dataset.firstname;
 //skul liste
 //document.getElementById("dropdownlist").style.display="none";
 // send api
