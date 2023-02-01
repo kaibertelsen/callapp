@@ -100,6 +100,10 @@ alarmmarkelement(element.parentElement);
 //generer element med beskjeden
 makemessageelement("",title,text,usernamedevice);
 
+//generer element med beskjeden
+makemessageelement("","",deviceid,userid,element.dataset.title,element.dataset.text);
+
+
 
 
 }
