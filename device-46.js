@@ -180,16 +180,19 @@ function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuse
 	arrayfieldname.push("senderuser");
 	arrayfieldvalue.push(senderuserid);
 
-	arrayfieldname.push("reciveruser");
-	arrayfieldvalue.push(resiveuserid);
+	
 
 if (resivedeviceid=="all"){
 	//skal sendes til alle opplistede enheter
 	arrayfieldname.push("toall");
 	arrayfieldvalue.push("true");
 }else{
+	arrayfieldname.push("reciveruser");
+	arrayfieldvalue.push(resiveuserid);
+
 	arrayfieldname.push("reciverdevice");
 	arrayfieldvalue.push(resivedeviceid);
+	
 	arrayfieldname.push("toall");
 	arrayfieldvalue.push("false");
 
