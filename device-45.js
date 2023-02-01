@@ -101,7 +101,7 @@ alarmmarkelement(element.parentElement);
 makemessageelement("",title,text,usernamedevice);
 
 //generer element med beskjeden
-makemessageelement("","",deviceid,userid,element.dataset.title,element.dataset.text);
+makemessageelement("all","",deviceid,userid,element.dataset.title,element.dataset.text);
 
 
 
@@ -183,16 +183,22 @@ function makemessageelement(resivedeviceid,resiveuserid,senderdeviceid,senderuse
 	arrayfieldname.push("reciveruser");
 	arrayfieldvalue.push(resiveuserid);
 
-
+if (resivedeviceid=="all"){
+	//skal sendes til alle opplistede enheter
+	arrayfieldname.push("toall");
+	arrayfieldvalue.push("true");
+}else{
 	arrayfieldname.push("reciverdevice");
 	arrayfieldvalue.push(resivedeviceid);
-	
+	arrayfieldname.push("toall");
+	arrayfieldvalue.push("false");
+
+}
 
 	arrayfieldname.push("status");
 	arrayfieldvalue.push("open");
 
-	arrayfieldname.push("toall");
-	arrayfieldvalue.push("false");
+	
 	
 	creatsendoapi("63c66ea078517bf506285585",arrayfieldname,arrayfieldvalue);
 	}
