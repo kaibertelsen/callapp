@@ -78,7 +78,7 @@ if (element.dataset.senddevicename=="true"){
 dname=devicename+"-";
 }
 
-if (element.dataset.sendusername=="true"){
+if (element.dataset.senddeviceusername=="true"){
 uname = "_Fra:"+usernamedevice;
 }
 
