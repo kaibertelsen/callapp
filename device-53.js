@@ -38,6 +38,7 @@ sendtoapi("100",arrayfieldname,arrayfieldvalue);
 
 //skjul dorpdown liste
 document.getElementById("dropdownlistheader").style.display="none";
+clickdr2=0
 
 //Sjekke om dette er en dummy bruker type "ledig"
 if(element.dataset.firstname=="Ledig"){
@@ -87,6 +88,7 @@ document.getElementById("statusdropdownbutton").onclick = function(event) {
 		sendtoapi("200",arrayfieldname,arrayfieldvalue);
 		//Skjule dropdownliste
 		document.getElementById("dropdownlistwrapper").style.display = "none";
+		clickdr1=0
 		}
 
 function deviceselect(elementid){
