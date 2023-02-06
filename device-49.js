@@ -11,9 +11,9 @@ document.getElementById("lastnametext").innerHTML=element.dataset.lastname;
 //sett variabelennavn
 usernamedevice=element.dataset.firstname;
 //skul liste
-//document.getElementById("dropdownlist").style.display="none";
-// send api
+document.getElementById("dropdownlistheader").style.display="none";
 
+// send api
 var arrayfieldname = [];
 arrayfieldname.push("name");
 arrayfieldname.push("user");
