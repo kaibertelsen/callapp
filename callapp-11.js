@@ -47,3 +47,6 @@ function creatsendoapi(cid,arrayfieldname,arrayfieldvalue){
    
 
 }
+
+//test for API mot CMS Navn
+//callapi("","63c66ea078517bf506285585","63d931790092cd0e36678ea8","","GET","webflow","600");
