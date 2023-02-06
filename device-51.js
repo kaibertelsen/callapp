@@ -38,6 +38,18 @@ sendtoapi("100",arrayfieldname,arrayfieldvalue);
 
 //skjul dorpdown liste
 document.getElementById("dropdownlistheader").style.display="none";
+
+//Sjekke om dette er en dummy bruker type "ledig"
+if(element.dataset.firstname=="Ledig"){
+//er device i status i bruk?
+var statusdevice = document.getElementById("statustext").innerHTML;
+if(statusdevice=="Er i bruk"){
+//da skal den skifte til Brukt
+// sett status on device
+statusselect("ma-sprites");
+}
+
+}
 }
 
 
