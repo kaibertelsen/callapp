@@ -173,7 +173,7 @@ document.getElementById("text").value = text;
 sendmaster();
 alarmmarkelement(element.parentElement);
 //generer element med beskjeden
-makemessageelement(todevice,"",deviceid,userid,element.dataset.title,element.dataset.text);
+makemessageelement(todevice,userdevicewebflowid,deviceid,userid,element.dataset.title,element.dataset.text);
 }
 
 //Underbutton select
