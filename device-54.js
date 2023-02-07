@@ -26,6 +26,8 @@ document.getElementById("firstnametext").innerHTML=element.dataset.firstname;
 document.getElementById("lastnametext").innerHTML=element.dataset.lastname;
 //sett variabelennavn
 usernamedevice=element.dataset.firstname;
+//sett variabelbrukerid
+userid=element.dataset.webflowid;
 
 // send api
 var arrayfieldname = [];
@@ -68,9 +70,9 @@ document.getElementById("statusdropdownbutton").onclick = function(event) {
 		  clickdr1=0;
 			 }
 	
-	}
+}
 
-	function statusselect(elementid){
+function statusselect(elementid){
 		const element = document.getElementById(elementid);
 		//sett nytt text
 		const textelement=document.getElementById("statustext");
@@ -89,7 +91,7 @@ document.getElementById("statusdropdownbutton").onclick = function(event) {
 		//Skjule dropdownliste
 		document.getElementById("dropdownlistwrapper").style.display = "none";
 		clickdr1=0
-		}
+}
 
 function deviceselect(elementid){
 const element = document.getElementById(elementid);
