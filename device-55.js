@@ -133,21 +133,36 @@ document.getElementById("beskjed").style.display = "none";
 
 function globalbuttonselect(elementid){
 const element = document.getElementById(elementid);
-var deviceids = findallelement("active","recivers");
 
+var deviceids = "";
 var title="";
 var text="";
 var uname= "";
 var dname="";
 var tname="";
+var todevice = "";
+
+if (element.dataset.sendtoall=="true"){
+	deviceids = findallelement("active","recivers");
+	todevice = "all";
+}else{
+//send device user tlf device
+deviceids = userdeviceid;
+todevice = userdevicewebflowid;
+}
 
 if (element.dataset.senddevicename=="true"){
-dname=devicename+"-";
+dname=devicename+"\n";
 }
 
 if (element.dataset.senddeviceusername=="true"){
 uname = "_Fra:"+usernamedevice;
 }
+
+if (!element.dataset.changestatus==""){
+	// sett status on device
+	statusselect(element.dataset.changestatus);
+	}
 
 title=dname+element.dataset.title;
 text = dname+element.dataset.text+tname+uname;
@@ -158,7 +173,7 @@ document.getElementById("text").value = text;
 sendmaster();
 alarmmarkelement(element.parentElement);
 //generer element med beskjeden
-makemessageelement("all","",deviceid,userid,element.dataset.title,element.dataset.text);
+makemessageelement(todevice,"",deviceid,userid,element.dataset.title,element.dataset.text);
 }
 
 //Underbutton select
