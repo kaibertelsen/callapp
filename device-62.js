@@ -179,7 +179,9 @@ if (!element.dataset.changestatus==""){
 document.getElementById("todeviceid").value = deviceids;
 document.getElementById("alerttitle").value = title;
 document.getElementById("text").value = text;
-if(!devicename=="Admin-rom"){
+if(devicename=="Admin-rom"){
+//Admin ikke send til alle
+}else{
 sendmaster();
 }
 alarmmarkelement(element.parentElement);
