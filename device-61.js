@@ -142,15 +142,7 @@ var dname="";
 var tname="";
 var todevice = "";
 
-if (element.dataset.sendtoall=="true"){
-	deviceids = findallelement("active","recivers");
-	todevice = "all";
-}else{
-//send device user tlf device
-deviceids = userdeviceid;
-todevice = userdevicewebflowid;
-tousername = usernamedevice;
-}
+
 
 if (element.dataset.senddevicename=="true"){
 dname=devicename+" ";
@@ -160,13 +152,29 @@ if (element.dataset.senddeviceusername=="true"){
 uname = "_Fra:"+usernamedevice;
 }
 
+
+title=dname+element.dataset.title;
+text = dname+element.dataset.text+tname+uname;
+
 if (!element.dataset.changestatus==""){
 	// sett status on device
 	statusselect(element.dataset.changestatus);
 	}
 
-title=dname+element.dataset.title;
-text = dname+element.dataset.text+tname+uname;
+	if (element.dataset.sendtoall=="true"){
+		deviceids = findallelement("active","recivers");
+		todevice = "all";
+	}else{
+	//send device user tlf device
+	title = devicename;
+	text = element.dataset.text;
+	deviceids = userdeviceid;
+	todevice = userdevicewebflowid;
+	tousername = usernamedevice;
+	}
+
+
+
 
 document.getElementById("todeviceid").value = deviceids;
 document.getElementById("alerttitle").value = title;
