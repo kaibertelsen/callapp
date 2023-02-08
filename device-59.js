@@ -149,10 +149,11 @@ if (element.dataset.sendtoall=="true"){
 //send device user tlf device
 deviceids = userdeviceid;
 todevice = userdevicewebflowid;
+tousername = usernamedevice;
 }
 
 if (element.dataset.senddevicename=="true"){
-dname=devicename+"\n";
+dname=devicename+" ";
 }
 
 if (element.dataset.senddeviceusername=="true"){
@@ -170,7 +171,9 @@ text = dname+element.dataset.text+tname+uname;
 document.getElementById("todeviceid").value = deviceids;
 document.getElementById("alerttitle").value = title;
 document.getElementById("text").value = text;
+if(!devicename=="Admin-rom"){
 sendmaster();
+}
 alarmmarkelement(element.parentElement);
 //generer element med beskjeden
 makemessageelement(todevice,userid,deviceid,userid,element.dataset.title,element.dataset.text);
