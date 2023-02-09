@@ -168,7 +168,7 @@ if (!element.dataset.changestatus==""){
 	}
 
 	if (element.dataset.sendtoall=="true"){
-		deviceids = findallelement("active","recivers");
+		deviceids = findallelement("active","group1");
 		todevice = "all";
 	}else{
 	//send device user tlf device
