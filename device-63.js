@@ -95,6 +95,10 @@ function statusselect(elementid){
 
 function deviceselect(elementid){
 const element = document.getElementById(elementid);
+//sjekke om det skal vises standard pnappepanel for denne mottaker
+if (element.dataset.resiverbuttonpanel=="true"){
+//da skal den ikke ha standard knapper
+}else{
 //lukke og skule beskjed wrapper
 if(elementid==selecteddevice){
 inverthideshow(document.getElementById("beskjed"));
@@ -124,6 +128,8 @@ document.getElementById("beskjed").style.display = "none";
 unmarkelement("devicemaster");
 document.getElementById("beskjed").style.display = "none";
 //alert er busy
+}
+
 }
 }
 
