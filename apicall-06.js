@@ -1,7 +1,8 @@
 
 async function callapi(baseId,collectionId,itemId,bodystring,type,db,fid){
     // fra memberstack
-    let token = MemberStack.getToken();
+    //let token = MemberStack.getToken();
+    let token = useryek;
     //PATCH
     if(type == "PATCH"){
         if(db=="webflow"){
