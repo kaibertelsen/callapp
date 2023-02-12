@@ -28,6 +28,11 @@ document.getElementById("lastnametext").innerHTML=element.dataset.lastname;
 usernamedevice=element.dataset.firstname;
 //sett variabelbrukerid
 userid=element.dataset.webflowid;
+//setter brukerens deice id iog webflowid
+userdeviceid=element.dataset.userdeviceid;
+userdevicewebflowid=element.dataset.userdevicewebflowid;
+
+
 
 // send api
 var arrayfieldname = [];
