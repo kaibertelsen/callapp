@@ -4,8 +4,8 @@ async function callapi(baseId,collectionId,itemId,bodystring,type,db,fid){
     let token = "";
     if (MemberStack.getToken()){
       token = MemberStack.getToken();
-    }else if (lokalStorage.getItem('keymemberlokal')){
-      token = lokalStorage.getItem('keymemberlokal');
+    }else if (localStorage.getItem('keymemberlokal')){
+      token = localStorage.getItem('keymemberlokal');
     }else{
       window.location.replace("https://callapp.no/organization/"+"orgslug");
            }
