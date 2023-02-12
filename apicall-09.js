@@ -7,7 +7,7 @@ async function callapi(baseId,collectionId,itemId,bodystring,type,db,fid){
     }else if (localStorage.getItem('keymemberlokal')){
       token = localStorage.getItem('keymemberlokal');
     }else{
-      window.location.replace("https://callapp.no/organization/"+"orgslug");
+      window.location.replace("https://callapp.no/organization/"+orgslug);
            }
     
    // let token = useryek;

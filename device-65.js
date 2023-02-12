@@ -31,7 +31,7 @@ userid=element.dataset.webflowid;
 //setter brukerens deice id iog webflowid
 userdeviceid=element.dataset.userdeviceid;
 userdevicewebflowid=element.dataset.userdevicewebflowid;
-
+changeuser="true";
 
 
 // send api
