@@ -103,6 +103,9 @@ const element = document.getElementById(elementid);
 //sjekke om det skal vises standard pnappepanel for denne mottaker
 if (element.dataset.resiverbuttonpanel=="true"){
 //da skal den ikke ha standard knapper
+//sjekke hvilke knapper denne enheten skal ha
+var resiverbuttonclass = element.dataset.resiverbuttongroup;
+
 }else{
 //lukke og skule beskjed wrapper
 if(elementid==selecteddevice){
