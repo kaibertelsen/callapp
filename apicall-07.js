@@ -1,8 +1,16 @@
 
 async function callapi(baseId,collectionId,itemId,bodystring,type,db,fid){
     // fra memberstack
-    //let token = MemberStack.getToken();
-    let token = useryek;
+    let token = "";
+    if (MemberStack.getToken()){
+      token = MemberStack.getToken();
+    }else if (lokalStorage.getItem('keymemberlokal')){
+      token = lokalStorage.getItem('keymemberlokal');
+    }else{
+      window.location.replace("https://callapp.no/organization/"+"orgslug");
+           }
+    
+   // let token = useryek;
     //PATCH
     if(type == "PATCH"){
         if(db=="webflow"){
