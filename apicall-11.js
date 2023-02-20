@@ -7,6 +7,8 @@ async function callapi(baseId,collectionId,itemId,bodystring,type,db,fid){
     }else if (localStorage.getItem('keymemberlokal')){
       token = localStorage.getItem('keymemberlokal');
     }else{
+      //mangler token
+      sessionStorage.setItem('needinlogg',window.location.href);
       window.location.replace("https://callapp.no/organization/"+orgslug);
            }
     
