@@ -84,7 +84,15 @@ function statusselect(elementid){
 		textelement.innerHTML=element.dataset.name;
 		const colorselect = textelement.parentElement.getElementsByClassName("statuscolor")[0];
 		colorselect.style.backgroundColor = element.dataset.color;
-		
+
+		if (element.dataset.trigger){
+		//denne skal trigge en handling
+			statustrigger(element.dataset.action);
+		}
+
+
+
+	
 		var arrayfieldname = [];
 		arrayfieldname.push("name");
 		arrayfieldname.push("devicestatus");
