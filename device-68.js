@@ -85,7 +85,7 @@ function statusselect(elementid){
 		const colorselect = textelement.parentElement.getElementsByClassName("statuscolor")[0];
 		colorselect.style.backgroundColor = element.dataset.color;
 
-		if (element.dataset.trigger){
+		if (element.dataset.trigger=="true"){
 		//denne skal trigge en handling
 			statustrigger(element.dataset.action);
 		}
