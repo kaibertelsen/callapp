@@ -87,7 +87,7 @@ function statusselect(elementid){
 
 		if (element.dataset.trigger=="true"){
 		//denne skal trigge en handling
-			statustrigger(element.dataset.action);
+			statustrigger(element.dataset.action,element.dataset.message);
 		}
 
 
